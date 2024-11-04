@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  db-order:
+    image: postgres
+    restart: always
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: orderDatabase
+  
+  db-stock:
+    image: postgres
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: stockDatabase
+  
+  db-product:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: productDatabase

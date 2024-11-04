@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "s8001btNxUoGYWvhu0Ae5whiPpKcz+CC6LvO5e9efKQ=",
+  "Source": "StockMicroService",
+  "BasePath": "_content/StockMicroService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

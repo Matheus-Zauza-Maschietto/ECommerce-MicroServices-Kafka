@@ -1,0 +1,8 @@
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.csproj.AssemblyReference.cache
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.GeneratedMSBuildEditorConfig.editorconfig
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.AssemblyInfoInputs.cache
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.AssemblyInfo.cs
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.csproj.CoreCompileInputs.cache
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.MvcApplicationPartsAssemblyInfo.cs
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.MvcApplicationPartsAssemblyInfo.cache
+/home/maquina-de-guerra/Documents/github/ECommerce/OrderMicroService/OrderMicroService/obj/Debug/net8.0/OrderMicroService.sourcelink.json
