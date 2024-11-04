@@ -1,6 +1,7 @@
 using MassTransit;
 using OrderMicroService;
 using OrderMicroService.DTOs;
+using StockMicroService.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,27 +16,14 @@ builder.Services.AddMassTransit(x =>
     {
         x.UsingInMemory();
 
+        rider.AddConsumer<OrderProductConsumer>();
+        rider.AddProducer<OrderProductStockCheckDTO>("order-product-created-topic");
+
         rider.UsingKafka((context, k) =>
         {
             k.Host("localhost:9092");
         });
         
-        rider.AddProducer<OrderProductStockCheckDTO>("order-product-created-topic");
-
-        // rider.AddConsumer<ProductCreatedConsumer>(c =>
-        // {
-        //     c.TopicName = "product-created-topic";
-        // });
-        //
-        // rider.AddConsumer<SaleCompletedConsumer>(c =>
-        // {
-        //     c.TopicName = "sale-completed-topic";
-        // });
-        //
-        // rider.AddConsumer<StockUpdatedConsumer>(c =>
-        // {
-        //     c.TopicName = "stock-updated-topic";
-        // });
     });
 });
 

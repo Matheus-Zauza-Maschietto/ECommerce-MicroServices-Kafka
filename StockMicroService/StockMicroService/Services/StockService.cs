@@ -65,17 +65,6 @@ public class StockService : IStockService
         return updatedStock;
     }
 
-    public async Task<bool> CheckStockById(CheckStockStatusDTO checkStockDto)
-    {
-        var stocksTuples = checkStockDto.StockChecks.Select(p => (p.StockId, p.Quantity));
-        var stocks = await _stockRepository.GetStocksWithoutAvaiability(stocksTuples);
-
-        if(stocks.Any())
-            return false;
-        else 
-            return true;
-    }
-
     private bool ValidateHexCode(string hexCode)
     {
         return Regex.IsMatch(hexCode, @"([\dA-Fa-f]{6}|[\dA-Fa-f]{3})");

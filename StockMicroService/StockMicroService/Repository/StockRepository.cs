@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using StockMicroService.DTOs;
 using StockMicroService.Models;
 using StockMicroService.Repository.Interfaces;
 
@@ -37,13 +38,7 @@ public class StockRepository : IStockRepository
     {
         return _dbContext.Update(stock).Entity; 
     }
-
-    public async Task<IEnumerable<Stock>> GetStocksWithoutAvaiability(IEnumerable<(int StockId, int Quantity)> stocks)
-    {
-        return _dbContext.Stocks
-                .Where(p => stocks.Select(s => s.StockId).Contains(p.Id))
-                .Where(p => stocks.First(x => x.StockId == p.Id).Quantity > p.Quantity);
-    }
+    
 
     public async Task<bool> SaveChangesAsync()
     {

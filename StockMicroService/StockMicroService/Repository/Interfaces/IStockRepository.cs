@@ -1,3 +1,4 @@
+using StockMicroService.DTOs;
 using StockMicroService.Models;
 
 namespace StockMicroService.Repository.Interfaces;
@@ -10,5 +11,4 @@ public interface IStockRepository
     Task<Stock> DeleteStockAsync(Stock stock);
     Task<Stock> UpdateStockAsync(Stock stock);
     Task<bool> SaveChangesAsync();
-    Task<IEnumerable<Stock>> GetStocksWithoutAvaiability(IEnumerable<(int StockId, int Quantity)> stocks);
 }

@@ -1,21 +1,21 @@
-using OrderMicroService.Models;
+using StockMicroService.Models;
 
-namespace OrderMicroService.DTOs;
+namespace StockMicroService.DTOs;
 
 public record OrderProductStockCheckDTO
 {
     public int Id { get; set; }
     public int StockId { get; set; }
     public int Quantity { get; set; }
+    public bool? StockIsOk { get; set; }
     public OrderProductStockCheckDTO()
     {
         
     }
 
-
-    public OrderProductStockCheckDTO(OrderProduct orderProduct)
+    public OrderProductStockCheckDTO(Stock stock)
     {
-        StockId = orderProduct.ProductStockId;
-        Quantity = orderProduct.Quantity;
+        StockId = stock.Id;
+        Quantity = stock.Quantity;
     }
-};
+}
